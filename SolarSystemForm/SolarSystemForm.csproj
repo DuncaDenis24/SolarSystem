@@ -80,7 +80,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SolarSystem\SolarSystem\SolarSystem.csproj">
+    <ProjectReference Include="..\SolarSystemApp\SolarSystem\SolarSystem.csproj">
       <Project>{be8fe02d-7df5-4f85-9f45-6f328ff77987}</Project>
       <Name>SolarSystem</Name>
     </ProjectReference>

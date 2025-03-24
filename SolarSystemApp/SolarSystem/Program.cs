@@ -82,8 +82,12 @@ namespace SolarSystem
                         {
                             mass = float.Parse(parts[i + 2]);
                         }
+
                     }
+
                 }
+                planets.Add(new Planet(planetName, diameter, mass));
+
             }
             sr.Close();
             return planets;

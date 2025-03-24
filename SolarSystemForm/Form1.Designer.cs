@@ -28,7 +28,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panelSolarSystem = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.loadPlanets = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,16 +49,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.simulateSystem = new System.Windows.Forms.Button();
+            this.panelSolarSystem = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelSolarSystem
-            // 
-            this.panelSolarSystem.Location = new System.Drawing.Point(881, 362);
-            this.panelSolarSystem.Name = "panelSolarSystem";
-            this.panelSolarSystem.Size = new System.Drawing.Size(566, 580);
-            this.panelSolarSystem.TabIndex = 0;
-            this.panelSolarSystem.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSolarSystem_Paint);
             // 
             // loadPlanets
             // 
@@ -110,9 +103,9 @@
             // planetsDescription
             // 
             this.planetsDescription.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.planetsDescription.Location = new System.Drawing.Point(314, 455);
+            this.planetsDescription.Location = new System.Drawing.Point(292, 455);
             this.planetsDescription.Name = "planetsDescription";
-            this.planetsDescription.Size = new System.Drawing.Size(354, 53);
+            this.planetsDescription.Size = new System.Drawing.Size(429, 40);
             this.planetsDescription.TabIndex = 8;
             this.planetsDescription.Text = "";
             // 
@@ -230,7 +223,7 @@
             this.button4.TabIndex = 19;
             this.button4.Text = "Solar System Info";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.SolarSystemInfok);
+            this.button4.Click += new System.EventHandler(this.SolarSystemInfo);
             // 
             // richTextBox4
             // 
@@ -249,12 +242,32 @@
             this.richTextBox5.TabIndex = 21;
             this.richTextBox5.Text = "";
             // 
+            // simulateSystem
+            // 
+            this.simulateSystem.Enabled = false;
+            this.simulateSystem.Location = new System.Drawing.Point(1100, 948);
+            this.simulateSystem.Name = "simulateSystem";
+            this.simulateSystem.Size = new System.Drawing.Size(162, 29);
+            this.simulateSystem.TabIndex = 22;
+            this.simulateSystem.Text = "Simulate Solar System";
+            this.simulateSystem.UseVisualStyleBackColor = true;
+            this.simulateSystem.Click += new System.EventHandler(this.simulateSystem_Click);
+            // 
+            // panelSolarSystem
+            // 
+            this.panelSolarSystem.Location = new System.Drawing.Point(881, 362);
+            this.panelSolarSystem.Name = "panelSolarSystem";
+            this.panelSolarSystem.Size = new System.Drawing.Size(566, 580);
+            this.panelSolarSystem.TabIndex = 0;
+            this.panelSolarSystem.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSolarSystem_Paint);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1924, 1040);
+            this.Controls.Add(this.simulateSystem);
             this.Controls.Add(this.panelSolarSystem);
             this.Controls.Add(this.richTextBox5);
             this.Controls.Add(this.richTextBox4);
@@ -306,6 +319,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.RichTextBox richTextBox4;
         private System.Windows.Forms.RichTextBox richTextBox5;
+        private System.Windows.Forms.Button simulateSystem;
     }
 }
 
